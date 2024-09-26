@@ -12,7 +12,7 @@ for key, value in product.items():
     print(f"{key:<8}: {value:>6.2f} taka")
 print("-----------------------------------------")
 while True:
-    item=input("Enter a product to buy or press 'q/Q' to quit: ").capitalize()
+    item=input("Enter a product to add to cart or press 'q/Q' to quit: ").capitalize()
     if product.get(item) is not None:
         order.append(item)
         if item.find("s")==len(item)-1 or item.find("S")==len(item)-1:
@@ -26,7 +26,7 @@ while True:
         break
     else:
         print(f"Sorry! {item} is not in the list.")
-print("-------------ORDER---------------")
+print("-------------CART---------------")
 print()
 print("You've orderded: ")
 for item in order:
